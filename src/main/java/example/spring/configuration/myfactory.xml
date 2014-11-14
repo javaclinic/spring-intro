@@ -11,10 +11,9 @@
     <bean id="mydao" class="example.dao.EmployeeDaoMapImpl">
         <property name="database" ref="mydatabase" />
     </bean>
-    
+
     <bean id="myservice" class="example.services.EmployeeServiceImpl">
         <property name="dao" ref="mydao" />
     </bean>
-    
-   
+
 </beans>

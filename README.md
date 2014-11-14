@@ -14,7 +14,7 @@
 
 ## Build JAR
 
-* `mvn package` - builds a jar file, e.g. `target/springintro.jar`
+* `mvn clean package` - builds a jar file, e.g. `target/springintro.jar`
 
 ## Run example
 

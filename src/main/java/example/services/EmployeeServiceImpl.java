@@ -5,45 +5,52 @@ import java.util.Collection;
 import example.dao.EmployeeDao;
 import example.model.Employee;
 
+/**
+ * Implementation of EmployeeService interface.
+ * 
+ * @author nevenc
+ *
+ */
 public class EmployeeServiceImpl implements EmployeeService {
 
-	private EmployeeDao dao;
-	
-	public EmployeeServiceImpl() {
-	}
-	
-	public EmployeeServiceImpl(EmployeeDao dao) {
-		this.dao = dao;
-	}
+    private EmployeeDao dao;
 
-	public void setDao(EmployeeDao dao) {
-		this.dao = dao;
-	}
+    public EmployeeServiceImpl() {
+    }
 
-	@Override
-	public void hireEmployee(Employee e) {
-		dao.saveEmployee(e);
-	}
-	
-	@Override
-	public void hireEmployees(Collection<Employee> list) {
-		for (Employee e : list) {
-			dao.saveEmployee(e);
-		}
-	}
+    public EmployeeServiceImpl(EmployeeDao dao) {
+        this.dao = dao;
+    }
 
-	@Override
-	public Collection<Employee> getEmployees() {
-		return dao.findEmployees();
-	}
+    public void setDao(EmployeeDao dao) {
+        this.dao = dao;
+    }
 
-	@Override
-	public int countEmployees() {
-		return dao.findEmployees().size();
-	}
+    @Override
+    public void hireEmployee(Employee e) {
+        dao.saveEmployee(e);
+    }
 
-	@Override
-	public Employee getEmployeeDetails(Integer id) {
-		return dao.findEmployeeById(id);
-	}
+    @Override
+    public void hireEmployees(Collection<Employee> list) {
+        for (Employee e : list) {
+            dao.saveEmployee(e);
+        }
+    }
+
+    @Override
+    public Collection<Employee> getEmployees() {
+        return dao.findEmployees();
+    }
+
+    @Override
+    public int countEmployees() {
+        return dao.findEmployees().size();
+    }
+
+    @Override
+    public Employee getEmployeeDetails(Integer id) {
+        return dao.findEmployeeById(id);
+    }
+
 }

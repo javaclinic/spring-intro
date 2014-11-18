@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/favicon.ico">
+    <title>JavaClinic :: Spring Examples :: spring-intro</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+
+    <div class="container">
+
+      <a href="https://github.com/javaclinic/spring-intro"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://javaclinic.github.io/">JavaClinic</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="http://javaclinic.github.io/spring.html">Spring Examples</a></li>
+              <li class="active"><a href="index.html">spring-intro</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>spring-intro</h1>
+      </div>
+
+      <div class="article">
+        <p>This simple example illustrates Inversion of Control (IoC) and how to implement this with Spring and with no Spring.</p>
+        <p>There are two runnable applications, e.g.</p>
+        <ul>
+          <li><a href="https://github.com/javaclinic/spring-intro/blob/master/src/main/java/example/run/MyEmployeeNoSpringApp.java"><code>example.run.MyEmployeeNoSpringApp</code></a></li>
+          <li><a href="https://github.com/javaclinic/spring-intro/blob/master/src/main/java/example/run/MyEmployeeWithSpringApp.java"><code>example.run.MyEmployeeWithSpringApp</code></a></li>
+        </ul>
+        <p>Both applications configure and instantiate their own <strong>bean factory</strong>, e.g.</p>
+        <ul>
+          <li><a href="https://github.com/javaclinic/spring-intro/blob/master/src/main/java/example/nospring/configuration/NoSpringBeanFactory.java"><code>example.nospring.configuration.NoSpringBeanFactory</code></a> (no Spring, our own implementation)</li>
+          <li><a href="http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/beans/factory/BeanFactory.html"><code>org.springframework.beans.factory.BeanFactory</code></a> (Spring-provided interface) with <a href="http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/support/ClassPathXmlApplicationContext.html"><code>org.springframework.context.support.ClassPathXmlApplicationContext</code></a> (Spring-provided implementation)</li>
+        </ul>
+        <p>Once the applications configure and instantiate bean factories, the operations are the same for both application versions. The applications ask for an instance of <a href="https://github.com/javaclinic/spring-intro/blob/master/src/main/java/example/services/EmployeeService.java"><code>example.services.EmployeeService</code></a> type of bean, called <code>myservice</code>. Once they get hold of a service instance, they call the business service method, e.g. <code>example.services.EmployeeService.countEmployees()</code>.</p>
+        <p>This example application illustrates the purpose of Spring's <code>BeanFactory</code> <strong>IoC container</strong>. We could achieve the same thing with our "own factory", but we would need to code it every time for a new project. Spring's <code>BeanFactory</code> and its derivations (e.g. <code>ApplicationContext</code>, etc.) provide powerful way to wire your application components (i.e. beans).</p>
+        <p>We presented the most traditional way (i.e. "old way") of configuring Spring container, by using an XML configuration file. There are other ways to configure and wire your components, e.g. autowiring, annotations, no-xml configuration, etc.</p>
+      </div>
+
+    </div> <!-- /container -->
+
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">&copy; JavaClinic 2014</p>
+      </div>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+

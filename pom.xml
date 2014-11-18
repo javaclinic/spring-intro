@@ -6,11 +6,11 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.javaclinic</groupId>
-    <artifactId>springintro</artifactId>
+    <artifactId>spring-intro</artifactId>
     <packaging>jar</packaging>
     <version>1.0.0-SNAPSHOT</version>
     <name>SpringIntro</name>
-    <url>http://javaclinic.com/examples/springintro</url>
+    <url>http://javaclinic.github.io/spring-intro</url>
 
     <properties>
         <junit.version>4.11</junit.version>
@@ -45,7 +45,7 @@
     </dependencies>
 
     <build>
-        <finalName>springintro</finalName>
+        <finalName>spring-intro</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

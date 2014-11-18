@@ -1,4 +1,4 @@
-# Spring Intro (springintro)
+# Spring Intro (spring-intro)
 
 * This simple example demonstrates inspiration for Spring Inversion of Control (IoC) container.
 * There are two runnable examples: `example.run.MyEmployeeNoSpringApp` and `example.run.MyEmployeeWithSpringApp`
@@ -14,7 +14,7 @@
 
 ## Build JAR
 
-* `mvn clean package` - builds a jar file, e.g. `target/springintro.jar`
+* `mvn clean package` - builds a jar file, e.g. `target/spring-intro.jar`
 
 ## Run example
 
@@ -27,9 +27,9 @@
 2. Select `Import...`
 3. Select `Maven`
 4. Select `Check out Maven Projects from SCM`
-5. Select SCM URL as `git` and type in `https://github.com/javaclinic/springintro.git`
+5. Select SCM URL as `git` and type in `https://github.com/javaclinic/spring-intro.git`
 6. Select `Finish`
-7. Right click on newly created project, e.g. `springintro`
+7. Right click on newly created project, e.g. `spring-intro`
 8. Select `Maven`
 9. Select `Update Project ... ALT+F5`
 10. Select `OK`

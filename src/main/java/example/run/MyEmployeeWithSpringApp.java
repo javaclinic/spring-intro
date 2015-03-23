@@ -20,7 +20,7 @@ public class MyEmployeeWithSpringApp {
     public static void main(String[] args) {
 
         // Instantiating Spring BeanFactory, an object factory that is configured in an XML file
-        BeanFactory factory = new ClassPathXmlApplicationContext("example/spring/configuration/myfactory.xml");
+        BeanFactory factory = new ClassPathXmlApplicationContext("myfactory.xml");
 
         // Ask container for an instance of EmployeeService
         EmployeeService service = factory.getBean("myservice", EmployeeService.class);

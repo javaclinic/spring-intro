@@ -13,7 +13,7 @@
     <url>http://javaclinic.github.io/spring-intro</url>
 
     <properties>
-        <spring.version>4.1.5.RELEASE</spring.version>
+        <spring.version>4.3.1.RELEASE</spring.version>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
@@ -21,11 +21,6 @@
     <dependencies>
 
         <!-- Spring dependency -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
